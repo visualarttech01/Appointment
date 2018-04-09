@@ -1,6 +1,6 @@
 {
   "name": "appointment",
-  "app_id": "",
+  "app_id": "bda8066b",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
