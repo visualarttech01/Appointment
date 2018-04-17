@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../../pages/login/login';
 import { SignupUserPage } from '../../pages/signup-user/signup-user';
 import { SignupProviderPage } from '../../pages/signup-provider/signup-provider';
+import { PickerPage } from '../../pages/picker/picker';
 
 /**
  * Generated class for the WelcomePage page.
@@ -35,4 +36,7 @@ export class WelcomePage {
     this.navCtrl.push('SignupProviderPage');
   }
 
+  picker(){
+    this.navCtrl.push('PickerPage');
+  }
 }

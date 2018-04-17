@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validator, AbstractControl, Validators} from '@angular/forms';
-import { PhotoLibrary } from '@ionic-native/photo-library';
-import { Base64 } from '@ionic-native/base64';
 
 /**
  * Generated class for the SignupProviderPage page.
@@ -37,8 +35,7 @@ export class SignupProviderPage {
   private user_type = "Provider";
   constructor(public navCtrl: NavController, 
     public formBuilder: FormBuilder,
-    private base64: Base64,
-    private photoLibrary: PhotoLibrary,
+   
     public navParams: NavParams) {
  
   // this.slideTwoForm = formBuilder.group({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validator, AbstractControl, Validators} from '@angular/forms';
-
+import { ContentProvider } from '../../providers/content/content';
 
 /**
  * Generated class for the SignupUserPage page.
@@ -31,10 +31,12 @@ export class SignupUserPage {
   area:AbstractControl;
   city:AbstractControl;
   zipcode:AbstractControl;
+  private resData:any;
   private user_type = "Customer";
   constructor(public navCtrl: NavController, 
     public formBuilder: FormBuilder,
-   public navParams: NavParams) {
+    private contentProvider: ContentProvider,
+    public navParams: NavParams) {
     
     this.formGroup = this.formBuilder.group({
       
@@ -73,7 +75,11 @@ export class SignupUserPage {
   signup(){
     this.signupData = JSON.stringify({"user_type": this.user_type,"name": this.name.value,"gender": this.gender.value,"dateofbirth":this.year.value+"-"+this.month.value+"-"+this.date.value,"email":this.email.value,"phone":this.phone.value,"password": this.password.value,"Address":{"address": this.area.value,"zipcode": this.zipcode.value,"city": this.city.value,"country_id": "162"}});
       // this.signupData = JSON.stringify({"user_type": this.user_type,"name": this.name.value,"gender": this.gender.value,"dateofbirth":this.date.value,"email":this.email.value,"phone":this.phone.value,"password": this.password.value,"Address":{"address":this.area.value}});
-
+      this.contentProvider.getAuth(this.signupData,"new_user").then((result) =>{
+        this.resData = result;
+        
+      });
+      console.log(this.resData);
     //console.log(this.dateBirth,'dat');
      console.log(this.signupData,'dat');
     }

@@ -8,13 +8,16 @@ import { ListPage } from '../pages/list/list';
 import { InitPage } from '../pages/init/init';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ImagePicker } from '@ionic-native/image-picker';
 import { ContentProvider } from '../providers/content/content';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignupUserPage } from '../pages/signup-user/signup-user';
 import { SignupProviderPage } from '../pages/signup-provider/signup-provider';
-import { PhotoLibrary } from '@ionic-native/photo-library';
+
 import { Base64 } from '@ionic-native/base64';
+import { PickerPage } from '../pages/picker/picker';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { Base64 } from '@ionic-native/base64';
     ListPage,
     InitPage,
     WelcomePage,
+    
     
   ],
   imports: [
@@ -37,6 +41,7 @@ import { Base64 } from '@ionic-native/base64';
     ListPage,
     InitPage,
     WelcomePage,
+    
    
   ],
   providers: [
@@ -44,7 +49,7 @@ import { Base64 } from '@ionic-native/base64';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContentProvider,
-    PhotoLibrary,
+    ImagePicker,
     Base64
   ]
 })
