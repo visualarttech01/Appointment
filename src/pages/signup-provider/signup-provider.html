@@ -1,0 +1,162 @@
+<ion-slides #signupSlider pager  class="swiper-no-swiping">
+ 
+  <ion-slide>
+ 
+    <p style="color: #ea6153;">Please fill out all details accurately.</p>
+ 
+    <ion-list>
+ 
+        <form [formGroup]="slideOneForm">
+ 
+            <ion-item>
+                <ion-label floating>
+                  <i class="fa fa-user"></i>
+                  Name<p *ngIf="name.hasError('required') && name.touched">*required</p>
+                </ion-label>
+                <ion-input type="text"formControlName="name"></ion-input>
+              </ion-item>
+              <ion-item>
+               <ion-label floating>
+                 <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+                 Email<p *ngIf="email.hasError('required') && email.touched">*required</p>
+               </ion-label>
+               <ion-input type="email" formControlName="email"></ion-input>
+             </ion-item>
+        
+             <ion-item>
+               <ion-label floating>
+                 <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                 Password<p *ngIf="password.hasError('required') && password.touched">*required</p>
+               </ion-label>
+               <ion-input type="password" formControlName="password"></ion-input>
+             </ion-item>
+             <ion-item>
+              <ion-label floating>
+                <ion-icon name="call"></ion-icon>
+                Phone<p *ngIf="phone.hasError('required') && phone.touched">*required</p>
+              </ion-label>
+              <ion-input type="text" formControlName="phone"></ion-input>
+            </ion-item>
+           
+            <ion-item>
+              <ion-label floating>
+                <ion-icon name="home" item-start class="text-primary"></ion-icon>
+                Street Address<p *ngIf="area.hasError('required') && area.touched">*required</p>
+              </ion-label>
+              <ion-input type="text" formControlName="area"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating><ion-icon name="transgender"></ion-icon>
+                Gender<p *ngIf="gender.hasError('required') && gender.touched">*required</p>
+              </ion-label>
+              <ion-select formControlName="gender">
+                <ion-option value="male">Male</ion-option>
+                <ion-option value="female">Female</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>
+                City<p *ngIf="city.hasError('required') && city.touched">*required</p>
+              </ion-label>
+              <ion-select formControlName="city">
+                <ion-option value="lahore">Lahore</ion-option>
+                <ion-option value="fasalabad">Fasalabad</ion-option>
+                <ion-option value="islamabad">Islamabad</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>
+                Zip Code<p *ngIf="zipcode.hasError('required') && zipcode.touched">*required</p>
+              </ion-label>
+              <ion-input type="text" formControlName="zipcode"></ion-input>
+            </ion-item>
+            <ion-item padding-top>
+                <ion-label>
+                  Birth<p *ngIf="date.hasError('required') && date.touched && date.hasError('required') && date.touched && month.hasError('required') && month.touched && year.hasError('required') && year.touched">*required</p>
+                </ion-label>
+                
+                <ion-select formControlName="date" placeholder="Day" >
+                    <ion-option value="01">1</ion-option>
+                    <ion-option value="02">2</ion-option>
+                    <ion-option value="03">3</ion-option>
+                    <ion-option value="04">4</ion-option>
+                    <ion-option value="05">5</ion-option>
+                    <ion-option value="06">6</ion-option>
+                    <ion-option value="07">7</ion-option>
+                    <ion-option value="08">8</ion-option>
+                    <ion-option value="09">9</ion-option>
+                    <ion-option value="10">10</ion-option>
+                    <ion-option value="11">11</ion-option>
+                    <ion-option value="12" checked="true">12</ion-option>
+                  </ion-select>
+                
+                <ion-select formControlName="month" placeholder="Month">
+                  <ion-option value="01">January</ion-option>
+                  <ion-option value="02">February</ion-option>
+                  <ion-option value="03">March</ion-option>
+                  <ion-option value="04">April</ion-option>
+                  <ion-option value="05">May</ion-option>
+                  <ion-option value="06">June</ion-option>
+                  <ion-option value="07">July</ion-option>
+                  <ion-option value="08">August</ion-option>
+                  <ion-option value="09">September</ion-option>
+                  <ion-option value="10">October</ion-option>
+                  <ion-option value="11">November</ion-option>
+                  <ion-option value="12" checked="true">December</ion-option>
+                </ion-select>
+                <ion-select formControlName="year" placeholder="Year">
+                  <ion-option>1989</ion-option>
+                  <ion-option>1990</ion-option>
+                  <ion-option>1991</ion-option>
+                  <ion-option>1992</ion-option>
+                  <ion-option>1993</ion-option>
+                  <ion-option checked="true">1994</ion-option>
+                  <ion-option>1995</ion-option>
+                  <ion-option>1996</ion-option>
+                  <ion-option>1997</ion-option>
+                  <ion-option>1998</ion-option>
+                  <ion-option>1999</ion-option>
+                </ion-select>
+              </ion-item>
+ 
+        </form>
+ 
+    </ion-list>
+ 
+  </ion-slide>
+ 
+  <ion-slide>
+ 
+    <ion-list>
+ 
+        <!-- <form [formGroup]="slideTwoForm">
+ 
+            <ion-item>
+                <ion-label floating>Username</ion-label>
+                <ion-input formControlName="username" type="text"></ion-input>
+            </ion-item>
+ 
+       
+            <ion-item>
+                <ion-label floating>Privacy</ion-label>
+                <ion-select formControlName="privacy">
+                    <ion-option value="public" checked="true">Public</ion-option>
+                    <ion-option value="friends">Friends Only</ion-option>
+                    <ion-option value="private">Private</ion-option>
+                </ion-select>
+            </ion-item>
+ 
+            <ion-item>
+                <ion-label floating>Bio</ion-label>
+                <ion-textarea formControlName="bio"></ion-textarea>
+            </ion-item>
+ 
+        </form> -->
+ 
+    </ion-list>
+ 
+    <button ion-button full color="primary" >Create Account!</button>
+ 
+  </ion-slide>
+ 
+</ion-slides>

@@ -1,0 +1,86 @@
+
+<ion-content padding>
+
+  <ion-row padding-top>
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              
+            </ion-col>
+            <ion-col>
+                <button ion-button block color="primary" outline>Be a Provider</button>
+            </ion-col>
+            <ion-col>
+              
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        
+      </ion-col>
+      <ion-col>
+          <button ion-button round color="primary" outline>Get An Appointment</button>
+      </ion-col>
+      <ion-col>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <table padding-top>
+ 
+      <tr *ngFor="let cat of allCat">
+        <td class="lefttd"><i class="fa fa-user-md"></i></td>
+        <td>{{cat.name}}<br><span>{{cat.providers}}</span></td>
+      </tr>
+      <!-- <tr>
+          <td class="lefttd">Lawyer<br><span>123,456,789</span></td>
+        <td><i class="fa fa-gavel icon"></i></td>
+        
+      </tr>  
+      <tr>
+        <td class="lefttd"><i class="fa fa-wrench icon"></i></td>
+        <td>Plumber<br><span>123,456,789</span></td>
+      </tr>      
+      <tr>
+          <td class="lefttd">Electrition<br><span>123,456,789</span></td>  
+        <td class="lefttd"><i class="fa fa-plug icon"></i></td>
+          
+        </tr> -->
+    </table>
+
+  
+</ion-content>
+
+<!-- <div padding-top>
+    <button ion-button block color="secondary">
+      <span class="icon-text">123,456,789<br>Docters</span>
+      <i class="fa fa-stethoscope icon-right"  text-left></i>
+    </button> 
+  </div>
+  <div padding-top>
+    <button ion-button block color="dark">
+      <i class="fa fa-wrench icon-left"></i>
+      <span class="icon-text">123,456,789<br>Plumber</span>
+    </button> 
+  </div>
+  <div padding-top>
+    <button ion-button block color="secondary">
+      <span class="icon-text">123,456,789<br>Saloon</span>
+      <i class="fa fa-cut icon-right"></i>
+    </button> 
+  </div>
+  <div padding-top>
+    <button ion-button block color="dark">
+      <i class="fa fa-gavel icon-left"></i>
+      <span class="icon-text">123,456,789<br>Lawyer</span>
+    </button> 
+  </div>
+  <div padding-top>
+    <button ion-button block color="secondary">
+      <span class="icon-text">123,456,789<br>Electrition</span>
+      <i class="fa fa-plug icon-right"></i>
+    </button> 
+  </div> -->

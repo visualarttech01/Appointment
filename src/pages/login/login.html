@@ -1,0 +1,38 @@
+<ion-content padding class="bgcolor">
+
+ 
+   <ion-grid>
+     <ion-row> 
+       <ion-col style="text-align: center">
+         <img src="../../assets/imgs/logoM.png" alt="test">
+       </ion-col> 
+     </ion-row> 
+     <form [formGroup]="formGroup" class="list-form" padding-top>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email <p *ngIf="email.hasError('required') && email.touched">*required</p>
+         
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="password.hasError('required') && password.touched">
+        <p>*Password Required</p>
+      </ion-item>
+    </form>
+
+    <div padding-top>
+      <button ion-button block color="dark" [disabled]="formGroup.invalid" (click)="signin()"><i class="fa fa-sign-in icon" style="color: #fff;"></i>Sign In</button> 
+    </div>
+    
+   </ion-grid>
+
+</ion-content>

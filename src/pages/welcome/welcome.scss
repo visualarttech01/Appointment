@@ -1,0 +1,82 @@
+page-welcome {
+	
+
+	.bgcolor{
+		color: #000;
+		font-weight: bold;
+	}
+	
+
+	img{
+		width: 70px;
+	}
+	
+
+	a{
+		font-weight: bold;
+		text-decoration: none;
+		color: #000;
+	}
+	
+
+	.icon-right{
+	    font-size: 20px;
+	    float: left;
+	    margin-inline-start: 30%;
+	    margin-inline-end: 10%;
+	}
+	.icon-left{
+	    
+
+	    font-size: 20px;
+	    float: left;
+	    margin-inline-start: 10%;
+	    margin-inline-end: 30%;
+	}
+	.icon-text{
+	    float: right;
+	}
+	.icon{
+	    padding-right: 10px;
+	    padding-left: 10px;
+	}
+	table {
+	    font-family: arial, sans-serif;
+	    width: 100%;
+	    border: 1px solid #EEE;
+	    text-align: center;
+	    
+
+	    margin-top: 20px;
+	    color: #000;
+	}
+	table span{
+		font-weight: bold;
+	}
+	
+
+	td, th {
+	    padding: 8px;
+	    border-collapse: collapse;
+	}
+	.fa{
+	    font-size: 23px;
+	    color: #000;
+	}
+	
+
+	tr:nth-child(even) {
+	    background-color: #eee;
+	    color: #000;
+	}
+	tr:nth-child(odd) {
+	    color: #000;
+	}
+	
+
+	
+
+	
+
+
+}
